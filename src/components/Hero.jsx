@@ -49,10 +49,10 @@ function Hero() {
             <div className="absolute inset-0 rounded-[2rem] bg-violet-500/30 blur-3xl" />
 
             <img
-              src="https://i.pravatar.cc/600?img=47"
-              alt="Profile"
-              className="relative h-[350px] w-[280px] rounded-[2rem] object-cover grayscale-[20%] shadow-2xl sm:h-[420px] sm:w-[340px]"
-            />
+  src="https://i.pravatar.cc/600?img=47"
+  alt="Profile"
+  className="relative h-[350px] w-[280px] rounded-[2rem] object-cover grayscale-[20%] shadow-2xl sm:h-[420px] sm:w-[340px]"
+/>
           </div>
         </div>
 
