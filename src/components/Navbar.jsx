@@ -24,7 +24,6 @@ function Navbar() {
 
         <div className="flex items-center justify-between">
 
-          {/* Logo */}
           <a
             href="#home"
             className="text-xl font-bold tracking-tight"
@@ -32,7 +31,6 @@ function Navbar() {
             Ardra<span className="text-violet-400">.</span>
           </a>
 
-          {/* Desktop Navigation */}
           <div className="hidden items-center gap-7 md:flex">
             {navItems.map((item) => (
               <a
@@ -45,10 +43,8 @@ function Navbar() {
             ))}
           </div>
 
-          {/* Social Links */}
           <div className="hidden items-center gap-3 md:flex">
 
-            {/* GitHub */}
             <a
               href="https://github.com/Ardra66"
               target="_blank"
@@ -67,7 +63,6 @@ function Navbar() {
               </svg>
             </a>
 
-            {/* LinkedIn */}
             <a
               href="#contact"
               aria-label="LinkedIn"
@@ -85,7 +80,6 @@ function Navbar() {
 
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="rounded-lg border border-white/10 p-2 text-gray-300 transition hover:border-violet-400/50 md:hidden"
@@ -99,7 +93,6 @@ function Navbar() {
 
         </div>
 
-        {/* Mobile Menu */}
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
