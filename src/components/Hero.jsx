@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 function Hero() {
   return (
     <section
@@ -11,16 +13,20 @@ function Hero() {
 
         {/* Left Content */}
         <div>
-          <p className="mb-5 text-sm uppercase tracking-[0.35em] text-violet-400">
-            Frontend Developer • MERN Stack
-          </p>
+          <motion.p
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  className="mb-5 text-sm uppercase tracking-[0.35em] text-violet-400"
+>
 
-          <h1 className="text-7xl font-black leading-[0.85] tracking-[-0.06em] sm:text-8xl md:text-[7rem] lg:text-[8.5rem]">
+</motion.p>
+
+          <motion.h1 className="text-7xl font-black leading-[0.85] tracking-[-0.06em] sm:text-8xl md:text-[7rem] lg:text-[8.5rem]">
             ARDRA
             <br />
             SURESH<span className="text-violet-500">.</span>
-          </h1>
-
+</motion.h1>
           <p className="mt-8 max-w-md text-sm leading-6 text-white/50">
             I create modern, responsive digital experiences with React,
             JavaScript and the MERN stack.
@@ -48,7 +54,7 @@ function Hero() {
           <div className="relative">
             <div className="absolute inset-0 rounded-[2rem] bg-violet-500/30 blur-3xl" />
 
-            <img
+          <motion.img
   src="https://i.pravatar.cc/600?img=47"
   alt="Profile"
   className="relative h-[350px] w-[280px] rounded-[2rem] object-cover grayscale-[20%] shadow-2xl sm:h-[420px] sm:w-[340px]"
