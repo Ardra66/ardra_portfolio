@@ -1,125 +1,197 @@
 import { motion } from "framer-motion";
 import { Code2, Palette, Rocket } from "lucide-react";
 
-const cards = [
-  {
-    icon: Code2,
-    title: "Development",
-    text: "Building responsive and functional web applications with React and the MERN stack.",
-  },
-  {
-    icon: Palette,
-    title: "UI & Design",
-    text: "Creating clean, modern interfaces with attention to visual details and user experience.",
-  },
-  {
-    icon: Rocket,
-    title: "Growth",
-    text: "Always learning new technologies and improving my skills through practical projects.",
-  },
-];
-
 function About() {
   return (
     <section
       id="about"
       className="relative overflow-hidden bg-[#050505] px-6 py-24 md:px-10 lg:px-16"
     >
-      <div className="pointer-events-none absolute right-0 top-20 h-72 w-72 rounded-full bg-[#0066ff]/10 blur-[120px]" />
+      {/* ================= BACKGROUND GLOW ================= */}
+      <div className="pointer-events-none absolute -left-40 top-20 h-80 w-80 rounded-full bg-[#dfff00]/5 blur-[120px]" />
 
-      <div className="mx-auto max-w-7xl">
-        {/* Heading */}
+      <div className="pointer-events-none absolute right-[-100px] top-1/3 h-96 w-96 rounded-full bg-[#0066ff]/5 blur-[140px]" />
+
+      <div className="relative z-10 mx-auto max-w-7xl">
+
+        {/* ================= TOP LABEL ================= */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-6 flex items-center gap-4"
         >
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-[#0066ff]">
+          <span className="h-[2px] w-12 bg-[#dfff00] shadow-[0_0_12px_#dfff00]" />
+
+          <p className="text-sm font-bold uppercase tracking-[0.35em] text-[#dfff00]">
             About Me
           </p>
-
-          <h2 className="max-w-4xl text-4xl font-black leading-tight text-white md:text-6xl">
-            Turning ideas into{" "}
-            <span className="text-[#dfff00] neon-yellow-glow">
-              digital experiences.
-            </span>
-          </h2>
         </motion.div>
 
-        {/* Content */}
-        <div className="mt-14 grid gap-12 lg:grid-cols-[1fr_1.2fr]">
-          {/* Number */}
+        {/* ================= MAIN CONTENT ================= */}
+        <div className="grid items-center gap-16 lg:grid-cols-2">
+
+          {/* ================= LEFT HEADING ================= */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.7 }}
-            className="relative"
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
           >
-            <span className="text-[9rem] font-black leading-none text-white/5 md:text-[12rem]">
-              01
-            </span>
+            <h2 className="text-5xl font-black leading-[0.95] tracking-[-0.04em] text-white md:text-6xl lg:text-7xl xl:text-8xl">
+              Turning ideas into{" "}
+              <span className="text-[#dfff00] drop-shadow-[0_0_18px_rgba(223,255,0,0.45)]">
+                digital
+              </span>
+              <br />
+              <span className="text-[#dfff00] drop-shadow-[0_0_18px_rgba(223,255,0,0.45)]">
+                experiences.
+              </span>
+            </h2>
 
-            <div className="absolute left-8 top-16 h-20 w-20 border border-[#dfff00]/40 shadow-[0_0_30px_rgba(223,255,0,0.15)]" />
+            {/* Decorative Lines */}
+            <div className="mt-10 flex gap-2">
+              <span className="h-[2px] w-16 bg-[#dfff00]" />
+              <span className="h-[2px] w-6 bg-[#dfff00]/40" />
+              <span className="h-[2px] w-2 bg-[#dfff00]/20" />
+            </div>
           </motion.div>
 
-          {/* Text */}
+          {/* ================= RIGHT TEXT ================= */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.15 }}
+            className="mx-auto max-w-2xl text-center lg:text-left"
           >
-            <p className="text-lg leading-8 text-gray-400">
+            <p className="text-base leading-7 text-gray-400 md:text-lg md:leading-8">
               I'm{" "}
-              <span className="font-semibold text-white">Ardra Suresh</span>,
-              a passionate Frontend / MERN Stack Developer who enjoys creating
-              modern, responsive and user-friendly websites.
+              <span className="font-bold text-white">
+                Ardra Suresh
+              </span>
+              , a passionate Frontend / MERN Stack Developer who enjoys
+              creating modern, responsive and user-friendly websites.
             </p>
 
-            <p className="mt-5 text-lg leading-8 text-gray-400">
+            <p className="mt-6 text-base leading-7 text-gray-400 md:text-lg md:leading-8">
               I love turning ideas into interactive experiences using
               JavaScript, React and modern web technologies. I'm continuously
               learning, experimenting and building projects that help me grow
               as a developer.
             </p>
-
-            {/* Cards */}
-            <div className="mt-10 grid gap-4 sm:grid-cols-3">
-              {cards.map((card, index) => {
-                const Icon = card.icon;
-
-                return (
-                  <motion.div
-                    key={card.title}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.2 }}
-                    transition={{
-                      duration: 0.5,
-                      delay: index * 0.12,
-                    }}
-                    whileHover={{ y: -6 }}
-                    className="group border border-white/10 bg-[#0a0a0a] p-5 transition duration-300 hover:border-[#dfff00]/50 hover:shadow-[0_0_25px_rgba(223,255,0,0.08)]"
-                  >
-                    <Icon
-                      size={25}
-                      className="text-[#dfff00] transition-transform duration-300 group-hover:scale-110"
-                    />
-
-                    <h3 className="mt-4 font-bold text-white">
-                      {card.title}
-                    </h3>
-
-                    <p className="mt-2 text-sm leading-6 text-gray-500">
-                      {card.text}
-                    </p>
-                  </motion.div>
-                );
-              })}
-            </div>
           </motion.div>
+        </div>
+
+        {/* ================= FEATURE CARDS ================= */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="mt-16 grid gap-4 md:grid-cols-3"
+        >
+
+          {/* Card 1 */}
+          <div
+            className="
+              group
+              border
+              border-white/10
+              bg-[#080808]
+              p-6
+              transition-all
+              duration-300
+              hover:border-[#dfff00]/40
+              hover:bg-[#0b0b0b]
+              hover:shadow-[0_0_30px_rgba(223,255,0,0.08)]
+            "
+          >
+            <Code2
+              size={28}
+              strokeWidth={1.8}
+              className="text-[#dfff00] transition-transform duration-300 group-hover:scale-110"
+            />
+
+            <h3 className="mt-5 text-lg font-bold text-white">
+              Clean Development
+            </h3>
+
+            <p className="mt-2 text-sm leading-6 text-gray-500">
+              Writing clean, maintainable and scalable code using modern
+              development practices.
+            </p>
+          </div>
+
+          {/* Card 2 */}
+          <div
+            className="
+              group
+              border
+              border-white/10
+              bg-[#080808]
+              p-6
+              transition-all
+              duration-300
+              hover:border-[#dfff00]/40
+              hover:bg-[#0b0b0b]
+              hover:shadow-[0_0_30px_rgba(223,255,0,0.08)]
+            "
+          >
+            <Palette
+              size={28}
+              strokeWidth={1.8}
+              className="text-[#dfff00] transition-transform duration-300 group-hover:scale-110"
+            />
+
+            <h3 className="mt-5 text-lg font-bold text-white">
+              Modern Design
+            </h3>
+
+            <p className="mt-2 text-sm leading-6 text-gray-500">
+              Creating visually engaging interfaces that are simple,
+              responsive and enjoyable to use.
+            </p>
+          </div>
+
+          {/* Card 3 */}
+          <div
+            className="
+              group
+              border
+              border-white/10
+              bg-[#080808]
+              p-6
+              transition-all
+              duration-300
+              hover:border-[#dfff00]/40
+              hover:bg-[#0b0b0b]
+              hover:shadow-[0_0_30px_rgba(223,255,0,0.08)]
+            "
+          >
+            <Rocket
+              size={28}
+              strokeWidth={1.8}
+              className="text-[#dfff00] transition-transform duration-300 group-hover:scale-110"
+            />
+
+            <h3 className="mt-5 text-lg font-bold text-white">
+              Continuous Growth
+            </h3>
+
+            <p className="mt-2 text-sm leading-6 text-gray-500">
+              Constantly learning new technologies and improving my skills
+              through real-world projects.
+            </p>
+          </div>
+        </motion.div>
+
+        {/* ================= BOTTOM DECORATION ================= */}
+        <div className="mt-12 flex items-center justify-center gap-3">
+          <span className="h-1.5 w-1.5 bg-[#dfff00] shadow-[0_0_10px_#dfff00]" />
+          <span className="h-px w-20 bg-white/10" />
+          <span className="h-1.5 w-1.5 bg-[#dfff00]/40" />
         </div>
       </div>
     </section>

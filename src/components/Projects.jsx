@@ -156,12 +156,10 @@ function Projects() {
               {/* Screenshot */}
               <div className="relative aspect-video overflow-hidden bg-[#0b0b0b]">
                 <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-[#0066ff]/20 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
-
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
-                />
+<img
+  src={project.image}
+  alt={project.title}
+/>
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-70" />
 
