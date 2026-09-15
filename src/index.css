@@ -1,16 +1,58 @@
 @import "tailwindcss";
 
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #050505;
+  color: #f5f5f5;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
+  min-width: 320px;
   background: #050505;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  color: #f5f5f5;
+  overflow-x: hidden;
 }
 
-* {
-  box-sizing: border-box;
+::selection {
+  background: #dfff00;
+  color: #050505;
+}
+
+/* Neon utilities */
+
+.neon-yellow {
+  color: #dfff00;
+}
+
+.neon-blue {
+  color: #0066ff;
+}
+
+.neon-yellow-glow {
+  text-shadow:
+    0 0 8px rgba(223, 255, 0, 0.7),
+    0 0 25px rgba(223, 255, 0, 0.35);
+}
+
+.neon-blue-glow {
+  text-shadow:
+    0 0 8px rgba(0, 102, 255, 0.7),
+    0 0 25px rgba(0, 102, 255, 0.35);
+}
+
+.neon-border-yellow {
+  box-shadow:
+    0 0 8px rgba(223, 255, 0, 0.35),
+    inset 0 0 8px rgba(223, 255, 0, 0.08);
+}
+
+.neon-border-blue {
+  box-shadow:
+    0 0 8px rgba(0, 102, 255, 0.35),
+    inset 0 0 8px rgba(0, 102, 255, 0.08);
 }

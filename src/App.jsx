@@ -1,39 +1,21 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
+import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Hero/Hero";
+import About from "./components/About/About";
+import Education from "./components/Education/Education";
+import Experience from "./components/Experience/Experience";
 
 function App() {
   return (
-    <>
+    <div className="min-h-screen bg-[#08090D] text-[#F5F7FA]">
       <Navbar />
 
       <main>
-<Hero />
-        <section
-          id="home"
-          className="flex min-h-screen items-center justify-center"
-        >
-          <div className="text-center">
-            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-violet-400">
-              Welcome to my portfolio
-            </p>
-
-            <h1 className="text-5xl font-bold md:text-7xl">
-              Ardra Suresh
-            </h1>
-
-            <p className="mt-5 text-lg text-gray-400">
-              Frontend / MERN Stack Developer
-            </p>
-          </div>
-        </section>
-
-        <section id="about" className="min-h-screen" />
-        <section id="skills" className="min-h-screen" />
-        <section id="projects" className="min-h-screen" />
-        <section id="experience" className="min-h-screen" />
-        <section id="contact" className="min-h-screen" />
+        <Hero />
+        <About />
+        <Education />
+        <Experience />
       </main>
-    </>
+    </div>
   );
 }
 
