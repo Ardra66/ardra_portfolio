@@ -1,21 +1,18 @@
-import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import About from "./components/About/About";
-import Education from "./components/Education/Education";
-import Experience from "./components/Experience/Experience";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#08090D] text-[#F5F7FA]">
+    <>
       <Navbar />
 
-      <main>
-        <Hero />
-        <About />
-        <Education />
-        <Experience />
+      <main id="home" className="min-h-screen bg-[#050505] pt-20">
+        <div className="flex min-h-[80vh] items-center justify-center">
+          <h1 className="text-4xl font-black text-white">
+            ARDRA <span className="neon-yellow">SURESH</span>
+          </h1>
+        </div>
       </main>
-    </div>
+    </>
   );
 }
 
