@@ -19,7 +19,7 @@ const projects = [
       "A modern expense management app with CRUD operations, calculations, filtering and local storage.",
     tech: ["React", "Tailwind CSS"],
     image: "/projects/Expense_tracker.png",
-    live: "",
+    live: " https://expense-tracker-murex-one-rmy2b89j7x.vercel.app",
     github: "",
   },
   {
